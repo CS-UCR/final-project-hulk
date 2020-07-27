@@ -6,9 +6,9 @@ Team Hulk set out to create a project that focused on current social media discu
 
 The idea to focus Team Hulk's project around the President was conceived due to social media responses both defending and attacking the President that has never been seen before. While we will not be able to analyze all social media posts or tweets relating to the President, we feel taking a sliver of this information will allow us to analyze the trends around the President's name.
 
-As a test run, we collected a small sample of Twitter data through the Tweepy library in order to better understand the dataset we were going to be working with that the Twitter API provides us. This dataset contains bulk, detailed information of a number of gathered tweets that have been posted pertaining to the President. Because this is was just a test, the amount of time tweets were collected in was rather short. This short amount of time collecting tweet data will not occur for the actual final project.
+As a test run, we collected a small sample of Twitter data through the Tweepy library in order to better understand the dataset we were going to be working with that the Twitter API provides us. This dataset contains bulk, detailed information of a number of gathered tweets that have been posted pertaining to the President. Since the actual dataset is too large, we will not be uploading it here. However, a sample dataset can be found under sample_data.json.
 
-In addition to this, our jupyter notebook requires more data cleaning before it is ready as a final project, and we plan to have it ready by the deadline. This will include organizing the data much better, and providing more in-depth descriptions and more code to analyze the data even further.
+As for the purpose of this project, we will be answering 2 questions relating to tweets mentioning the keyword "Donald Trump". First, we would like to know whether or not different types of hashtags trend throughout the day depending on real world events relating to Trump. Secondly, we would like to know if tweeters who mention Donald Trump in their tweets differ or are similar types of people. To answer these intriguing questions, we created the DataCleaning.ipynb to conduct our analysis. In depth descriptions and answers can be found inside or under the Data Analysis section down below.
 
 ### Twitter Api
 
@@ -16,7 +16,7 @@ We used the Tweepy library to access Twitter's API to livestream tweets. We were
 
 ### Data Cleaning
 
-The Twitter API collects extensive amounts of information on a single tweet. This includes the number of favorites, retweets, person's name, time sent, and more. After we json normalized our data, we discovered over 345 columns for a single tweet. However, most of it contained NaN. This is due to the tweet not containing data that met that column's requirement. We removed all of the columns where more than half of the values were NaN and did not apply to the tweets we gathered. After that, we also noticed that there were a couple of columns that did not pertain to the scope of our work, such as the number of favorites, retweets, and likes. This data is outside of the project's scope because livestreaming tweets only allows for seeing tweets in real time, so they will always be zero or close to zero and will not provide any useful information.
+The Twitter API collects extensive amounts of information on a single tweet. This includes the number of favorites, retweets, person's name, time sent, and more. After we json normalized our data, we discovered over 345 columns for a single tweet. However, most of it contained NaN. This is due to the tweet not containing data that met that column's requirement. We removed all of the columns where more than half of the values were NaN and did not apply to the tweets we gathered. After that, we also noticed that there were a couple of columns that did not pertain to the scope of our work, such as the number of favorites, retweets, and likes. This data is outside of the project's scope because livestreaming tweets only allows for seeing tweets in real time, so they will always be zero or close to zero and will not provide any useful information. Strings were also refined for better readability and to ease comparison between other variables. More in depth data cleaning in the notebook.
 
 ### Data Analysis
 
@@ -48,9 +48,9 @@ In order to run the TwitterStreamer program you need a set of the following: a c
 
 ## Authors
 
-<a href="https://github.com/ksand012"><img src="https://avatars0.githubusercontent.com/u/35273571?s=400&u=78662d345e71ce7f5b3aaa6a14d79ada4f4296e1&v=4" align="left" height="30px"></a> **Kramer Sanders**: project logistics, part of data cleaning, document analyzer.
+<a href="https://github.com/ksand012"><img src="https://avatars0.githubusercontent.com/u/35273571?s=400&u=78662d345e71ce7f5b3aaa6a14d79ada4f4296e1&v=4" align="left" height="30px"></a> **Kramer Sanders**: project logistics, document analyzer, part tweeter statistic analysis.
 
-<a href="https://github.com/jtang073"><img src="https://avatars2.githubusercontent.com/u/49227768?s=400&u=4f70a5b1d0525a13d219ac57c2750a1f9be340ce&v=4" align="left" height="30px"></a> **Jason Tang**: created TwitterStreamer.py to use Twitter API, part of data cleaning, collected tweets.
+<a href="https://github.com/jtang073"><img src="https://avatars2.githubusercontent.com/u/49227768?s=400&u=4f70a5b1d0525a13d219ac57c2750a1f9be340ce&v=4" align="left" height="30px"></a> **Jason Tang**: created TwitterStreamer.py to use Twitter API, data cleaning, collected tweets, trending hashtag analysis, part of tweeter statistic analysis, conclusion.
 
 ## License
 
